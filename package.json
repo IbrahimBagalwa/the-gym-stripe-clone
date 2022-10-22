@@ -1,0 +1,26 @@
+{
+  "name": "the-gym-stripe-clone",
+  "version": "1.0.0",
+  "description": "This is a solution to the Gym Traning. The Gym challenge help us to improve our coding skills by building realistic projects.\r In this exercise, we will use tailwindcss only. Try to use as much tailwindcss as you can. No vanilla CSS or BEM should be used. No custom CSS classes should be added to a CSS file. all CSS customization(if used) should be added to the tailwindcss config .",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./style/style.css -o ./dist/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IbrahimBagalwa/the-gym-stripe-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IbrahimBagalwa/the-gym-stripe-clone/issues"
+  },
+  "homepage": "https://github.com/IbrahimBagalwa/the-gym-stripe-clone#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1"
+  }
+}

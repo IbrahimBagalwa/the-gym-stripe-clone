@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,1,-25"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="Gradient.js"></script>
+
+    <title>Stripe</title>
+  </head>
+  <body class="font-sans bg-white z-40">
+    <section class="relative p-4 overflow-hidden isolate">
+      <nav class="flex items-center justify-around max-w-6xl mx-auto">
+        <span class="text-2xl font-bold text-white">Stripe</span>
+        <ul class="flex items-center gap-8">
+          <li class="font-semibold text-white cursor-pointer">Products</li>
+          <li class="font-semibold text-white cursor-pointer">Solution</li>
+          <li class="font-semibold text-white cursor-pointer">Developers</li>
+          <li class="font-semibold text-white cursor-pointer">Resources</li>
+          <li class="font-semibold text-white cursor-pointer">Pricing</li>
+        </ul>
+        <button
+          class="flex bg-[#CFD7DF] transition-all hover:bg-opacity-[0.6] duration-500 group hover: bg-opacity-[0.3] pl-[16px] pr-[12px] pt-[4px] pb-[7px] gap-[7px] rounded-[16.5px]"
+        >
+          <span class="m-auto text-white">Sign in</span>
+          <div class="relative m-auto mt-1">
+            <div
+              class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mr-[0px] mt-[10.31px] group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-white"
+            ></div>
+            <img
+              class="relative group-hover:translate-x-[1.55px] translate-x-[0px] transition-all ease-in-out duration-75"
+              src="https://cdn.discordapp.com/attachments/1021388253137473536/1027629448041861251/3-removebg-preview_1.png"
+              width="12px"
+              height="12px"
+            />
+          </div>
+        </button>
+      </nav>
+      <div class="container mx-auto mt-40">
+        <h1
+          class="relative text-[5rem] max-w-[13ch] leading-none text-[#454545] mix-blend-color-burn ml-16 font-bold"
+        >
+          Payments infrastructure for the internet
+        </h1>
+        <p class="w-[45%] mt-5 text-[#425466] font-semibold text-lg pr-4 pl-16">
+          Millions of companies of all sizes—from startups to Fortune 500s—use
+          Stripe’s software and APIs to accept payments, send payouts, and
+          manage their businesses online.
+        </p>
+        <div class="flex items-center justify-start pl-16 mt-5 space-x-3">
+          <button
+            class="flex bg-[#0a2540] transition-all duration-500 group pl-[16px] pr-[12px] pt-[4px] pb-[7px] gap-[7px] rounded-full hover:bg-[#425466]"
+          >
+            <span class="m-auto text-white">Start now</span>
+            <div class="relative m-auto mt-1">
+              <div
+                class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mr-[0px] mt-[10.31px] group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-white"
+              ></div>
+              <img
+                class="relative group-hover:translate-x-[1.55px] translate-x-[0px] transition-all ease-in-out duration-75"
+                src="https://cdn.discordapp.com/attachments/1021388253137473536/1027629448041861251/3-removebg-preview_1.png"
+                width="12px"
+                height="12px"
+              />
+            </div>
+          </button>
+          <button
+            class="flex transition-all hover:bg-opacity-[0.6] hover:text-[#425466] duration-500 group hover: bg-opacity-[0.3] pl-[16px] pr-[12px] pt-[4px] pb-[7px] gap-[7px] rounded-[16.5px]"
+          >
+            <span
+              class="m-auto text-[#0a2540] font-semibold hover:text-[#425466]"
+              >Contact sales</span
+            >
+            <div class="relative m-auto mt-1">
+              <div
+                class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mr-[0px] mt-[10.31px] group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-[#0a2540]"
+              ></div>
+              <img
+                class="relative group-hover:translate-x-[1.55px] translate-x-[0px] transition-all ease-in-out duration-75"
+                src="https://cdn.discordapp.com/attachments/1021388253137473536/1027629486184869888/3--black-removebg-preview_1.png"
+                width="12px"
+                height="12px"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="absolute canavas-container">
+        <canvas
+          id="gradient-canvas"
+          style="width: 100vw; height: 100vh"
+        ></canvas>
+      </div>
+      <!-- form and chart -->
+      <section class="-mt-[500px] ml-[65%] relative max-w-6xl mx-auto">
+        <div
+          class="bg-[#CFD7DF] bg-opacity-[0.7] rounded-lg -mr-[100rem] shadow-md drop-shadow-2xl py-8"
+        >
+          <div class="-mr-4 mix-blend-screen">
+            <img src="./assets/3-removebg-preview_3.png" alt="" />
+          </div>
+          <div class="grid gap-4 -mr-4 pl-60">
+            <img class="h-48" src="./assets/Capture1.png" alt="" />
+            <img class="h-48" src="./assets/Capture2.png" alt="" />
+          </div>
+        </div>
+        <!-- form -->
+        <div class="w-[60%] max-w-xs -mt-[433px] -ml-14">
+          <form
+            class="bg-white rounded-[40px] drop-shadow-2xl px-8 pt-6 pb-8 mb-4 border-8 shadow-md border-[#f3f7fad3]"
+          >
+            <img src="./assets/1.png" alt="" class="h-20 m-auto mb-2" />
+            <p class="text-center text-[14px] font-semibold mt-2 mb-2">
+              Increment Magazine <br />
+              <span class="text-[12px]">$14 per quater</span>
+            </p>
+            <button
+              class="bg-[#0a2540] text-center text-white w-full rounded-md"
+            >
+              Pay
+            </button>
+            <div class="text-[12px] text-center mt-1">Or pay with card</div>
+            <div class="mb-4">
+              <label class="block text-[12px] mb-2" for="username">
+                Email
+              </label>
+              <input
+                class="w-full px-3 py-0 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                id="username"
+                type="text"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-[12px] mb-2" for="username">
+                Card information
+              </label>
+              <div class="border rounded-md shadow">
+                <div class="flex items-center border-b-[1px]">
+                  <input
+                    class="border-none py-0 px-3 w-full focus:outline-none focus:shadow-outline placeholder:text-[12px]"
+                    id="username"
+                    placeholder="Number"
+                    type="number"
+                  />
+                  <img src="./assets/2.png" alt="" class="h-4" />
+                </div>
+                <div class="flex">
+                  <input
+                    class="border-none py-0 px-3 w-[50%] focus:outline-none placeholder:text-[12px] focus:shadow-outline"
+                    id="username"
+                    placeholder="MM/YY"
+                    type="number"
+                  />
+                  <span class="border-r-[1px]"></span>
+                  <input
+                    class="border-none py-0 px-3 w-[50%] focus:outline-none focus:shadow-outline placeholder:text-[12px]"
+                    id="username"
+                    placeholder="CVC"
+                    type="number"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="block text-[12px] mb-2" for="username">
+                Country or region
+              </label>
+              <div class="border rounded-md shadow">
+                <div class="flex items-center justify-between border-b-[1px]">
+                  <input
+                    class="border-none py-0 px-3 w-[50%] focus:outline-none focus:shadow-outline placeholder:text-[12px]"
+                    id="username"
+                    placeholder="United States"
+                    type="number"
+                  />
+                  <img
+                    src="./assets/expand_more_FILL0_wght100_GRAD200_opsz20.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="flex">
+                  <input
+                    class="border-none py-0 px-3 w-full focus:outline-none placeholder:text-[12px] focus:shadow-outline"
+                    id="username"
+                    placeholder="ZIP"
+                    type="number"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <button
+                class="bg-[#0a2540] text-center text-white w-full rounded-md"
+              >
+                Pay
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- end form -->
+      </section>
+      <!-- form and chart end -->
+    </section>
+    <!-- parteners -->
+    <section
+      class="container grid items-center justify-center grid-cols-4 gap-8 py-10 mx-auto place-items-center"
+    >
+      <img class="w-40" src="./assets/instacart.PNG" alt="" />
+      <img class="w-40" src="./assets/salesforce.PNG" alt="" />
+      <img class="w-40" src="./assets/amazone.PNG" alt="" />
+      <img class="w-40" src="./assets/slack.PNG" alt="" />
+      <img class="w-40" src="./assets/shopify.PNG" alt="" />
+      <img class="w-40" src="./assets/google.PNG" alt="" />
+      <img class="w-40" src="./assets/lyft.PNG" alt="" />
+      <img class="w-40" src="./assets/zoom.PNG" alt="" />
+    </section>
+    <!-- end part -->
+    <!-- payement integration -->
+    <section class="bg-[#f6f9fc]">
+      <section class="container px-20 mx-auto">
+        <div class="pt-24">
+          <h4 class="text-[#653bff] text-[18px] font-semibold mb-7">
+            Unified platform
+          </h4>
+          <h1 class="text-[#0a2540] font-bold text-4xl mb-7">
+            A fully integrated suite of <br />
+            payments products
+          </h1>
+        </div>
+        <div
+          class="grid justify-center w-full grid-cols-2 gap-6 justify-items-center"
+        >
+          <div>
+            <p class="text-[#425466] text-xl">
+              We bring together everything that’s required to build websites and
+              apps that accept payments and send payouts globally. Stripe’s
+              products power payments for
+              <span class="text-[#653bff]">
+                online and in-person retailers, subscriptions businesses,
+                software platforms and marketplaces,
+              </span>
+              and everything in between.
+            </p>
+          </div>
+          <div>
+            <p class="text-[#425466] text-xl">
+              We also help companies
+              <span class="text-[#653bff]">
+                beat fraud, send invoices, issue virtual and physical cards,
+                reduce friction at checkout, get financing, manage business
+                spend,
+              </span>
+              and much more.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="container mx-auto mt-16">
+        <!-- card sections -->
+        <div
+          class="grid gap-8 justify-center grid-cols-[323px_501px_256px] grid-rows-[86px_201px_126px_425px] py-4"
+        >
+          <div class="col-span-2">
+            <button
+              class="flex bg-[#635bff] transition-all duration-500 group pl-[16px] pr-[12px] pt-[4px] pb-[7px] gap-[7px] rounded-full hover:bg-[#0a2540]"
+            >
+              <span class="m-auto text-white">Start with payement</span>
+              <div class="relative m-auto mt-1">
+                <div
+                  class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mr-[0px] mt-[10.31px] group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-white"
+                ></div>
+                <img
+                  class="relative group-hover:translate-x-[1.55px] translate-x-[0px] transition-all ease-in-out duration-75"
+                  src="https://cdn.discordapp.com/attachments/1021388253137473536/1027629448041861251/3-removebg-preview_1.png"
+                  width="12px"
+                  height="12px"
+                />
+              </div>
+            </button>
+          </div>
+
+          <div class="row-span-3">
+            <img src="./assets/phone.png" alt="" class="rounded-lg shadow-lg" />
+          </div>
+          <div class="bg-[#ffc124] p-4 rounded-lg shadow-lg">
+            <div class="text-2xl font-bold text-white">Zestful</div>
+            <div class="flex px-2 my-7">
+              <img src="./assets/sim.png" alt="sim" class="h-9" />
+              <img
+                class="px-8 h-[70px]"
+                src="https://images.ctfassets.net/fzn2n1nzq965/5UPyWsxAvbXamxGLBfuTj3/426c7b5224259ded7bc95b21073f4c02/lemon.svg"
+                alt=""
+              />
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-normal text-white">Thomas Degry</span>
+              <svg
+                class="AnimatedCardGraphic__visa"
+                width="74"
+                height="20"
+                viewBox="0 0 84 27"
+              >
+                <path
+                  fill="#fff"
+                  d="M42 1l-5.43 26H30l5.43-26H42zm28 17h6L73.8 8 70 18zm7.81 9l-.8-3.88h-8.59L67.02 27H60L70.04 2.9A3.04 3.04 0 0 1 72.89 1h5.7L84 27h-6.19zm-17.09-8.94C60.7 23.5 55.95 27 48.7 27c-3.1-.03-6.07-.66-7.69-1.39l1.25-5.72c1.61.73 3.63 1.7 7.1 1.65 1.99-.03 4.12-.8 4.14-2.56.01-1.14-.9-1.96-3.59-3.24-2.61-1.25-6.09-3.35-6.05-7.1C43.9 3.53 48.7 0 55.53 0c2.67 0 4.8.57 6.47 1.15L60.79 6.7a13.29 13.29 0 0 0-6.82-1.16c-2 .25-2.9 1.25-2.93 2.18-.07 3.08 9.71 3.46 9.68 10.35zM32 1L20.96 27h-7.2L8.35 6.25C8 4.97 7.72 4.51 6.72 3.97A28.75 28.75 0 0 0 0 1.75L.16 1h11.59c1.48 0 2.8.97 3.14 2.65l2.87 15.05L24.85 1H32z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="row-span-2 p-0 rounded-lg bg-sky-400">
+            <img
+              src="./assets/scren.png"
+              alt=""
+              class="w-full h-full shadow-lg rounded-lg"
+            />
+          </div>
+          <div class="row-span-2 ml-6 rounded-lg bg-orange-400-">
+            <img src="./assets/phone-1.png" alt="" />
+          </div>
+          <div class="col-span-2 rounded-lg">
+            <img src="./assets/chart.png" alt="chart" />
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- end of payement integration -->
+    <section class="bg-[#0a2540] py-24 -skew-y-6 -translate-y-[15%]">
+      <section class="container mx-auto px-20">
+        <div class="grid grid-cols-4 gap-4 skew-y-6">
+          <div class="col-span-2">
+            <p class="text-[#00d4ff] text-lg font-semibold leading-10">
+              Designed for developers
+            </p>
+            <h2 class="text-white font-bold text-4xl mt-6 mb-6">
+              The world’s most powerful <br />
+              and easy-to-use APIs
+            </h2>
+            <p class="text-[#adbdcc] text-lg pr-20 mb-6">
+              We agonize over the right abstractions so your teams don’t need to
+              stitch together disparate systems or spend months integrating
+              payments functionality.
+            </p>
+            <button
+              class="flex bg-[#00d4ff] transition-all duration-500 group hover:bg-white pl-[16px] pr-[12px] pt-[4px] pb-[7px] gap-[7px] rounded-full"
+            >
+              <span class="m-auto text-[#0a2540] font-semibold"
+                >Read the docs</span
+              >
+              <div class="relative m-auto mt-1">
+                <div
+                  class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mr-[0px] mt-[10.31px] group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-[#0a2540]"
+                ></div>
+                <img
+                  class="relative group-hover:translate-x-[1.55px] translate-x-[0px] transition-all ease-in-out duration-75"
+                  src="https://cdn.discordapp.com/attachments/1021388253137473536/1027629486184869888/3--black-removebg-preview_1.png"
+                  width="12px"
+                  height="12px"
+                />
+              </div>
+            </button>
+          </div>
+          <div class="col-span-2 row-span-2 font-sourceCodePro">
+            <ul
+              class="bg-[#0C2E4E] rounded-t-lg pt-6 pb-40 px-8 text-white overflow-scroll modify--scroll"
+            >
+              <li class="w-[40rem] overflow-hidden">
+                <span class="mr-3 text-[#55718d]">1 </span>
+                <span class="text-[#8095ff]">const</span>
+                <span>stripe</span>
+                <span>=</span>
+                <span class="text-[#00d4ff]">require</span>
+                <span>(</span>
+                <span class="text-[#ffa956]">'stripe'</span>
+                <span class="">)(</span>
+                <span class="text-[#ffa956]"
+                  >'sk_test_BQokikJOvBi2Hl4olfQ2krjfdhlkdsajflsdkjfslkj'</span
+                >
+                <span class="">);</span>
+              </li>
+              <li>
+                <span class="mr-3 text-[#55718d]">2 </span>
+              </li>
+              <li class="flex gap-0">
+                <span class="mr-5 text-[#55718d]">3 </span>
+                <span class="mr-2 text-[#8095ff]">await</span>
+                <span> stripe.paymentIntents.</span>
+                <span class="text-[#00d4ff]">create</span>
+                <span>({</span>
+              </li>
+              <li class="flex gap-0">
+                <span class="mr-9 text-[#55718d]">4 </span>
+                <span class="mr-2">amount: </span>
+                <span class="text-[#ffa956]">2000</span>,
+              </li>
+              <li class="flex gap-0">
+                <span class="mr-9 text-[#55718d]">5 </span>
+                <span class="mr-2">currency: </span>
+                <span class="text-[#ffa956]">'usd'</span>,
+              </li>
+              <li class="flex gap-0">
+                <span class="mr-5 text-[#55718d]">6 </span>
+                <span class="mr-2"
+                  >}); <span class="ml-1 ring-1 ring-[#fff] px-1"></span
+                ></span>
+              </li>
+            </ul>
+            <div class="bg-transparent text-sm flex justify-between">
+              <div class="flex">
+                <p class="bg-[#8095ff] text-[#06182c] px-2">NORMAL</p>
+                <span class="text-[#8095ff] px-2">server.js</span>
+              </div>
+              <div class="flex text-[#55718d]">
+                <p class="px-2">100%</p>
+                <p class="pr-4">☰</p>
+                <p class="pr-2">6/6</p>
+                <p class="pr-4">ln</p>
+                <p class="pr-4">:</p>
+                <p class="pr-4">4</p>
+              </div>
+            </div>
+            <div
+              class="bg-[#06182c] px-5 py-6 text-base font-sourceCodePro font-medium flex flex-col pb-40 rounded-b-lg"
+            >
+              <span class="text-white leading-6"
+                ><span class="text-[#8095ff]">$</span
+                ><span> node server.js &amp;&amp; stripe listen</span>
+              </span>
+              <span class="text-white leading-6"
+                ><span>&gt; Ready! Waiting for requests...</span>
+              </span>
+              <span class="text-white leading-6"
+                ><span class="text-[#adbdcc]">2022-10-04 11:44:58</span> [<span
+                  class="text-[#00d4ff]"
+                  >200</span
+                >] <span>payment_intent.created</span>
+              </span>
+              <span class="text-white leading-6"
+                ><span class="text-[#adbdcc]">2022-10-04 11:44:58</span> [<span
+                  class="text-[#00d4ff]"
+                  >200</span
+                >] <span>charge.succeeded</span>
+              </span>
+              <span class="text-white leading-6"
+                ><span class="text-[#adbdcc]">2022-10-04 11:44:58</span> [<span
+                  class="text-[#00d4ff]"
+                  >200</span
+                >] <span>payment_intent.succeeded</span>
+              </span>
+            </div>
+          </div>
+          <div class="">
+            <svg
+              class="AnimatedIcon__icon"
+              width="96"
+              height="96"
+              preserveAspectRatio="xMinYMin"
+              viewBox="0 0 96 96"
+              xmlns="http://www.w3.org/2000/svg"
+              data-js-controller="TerminalIcon"
+            >
+              <defs>
+                <path
+                  id="terminalIconCode"
+                  d="M44 28a4 4 0 0 1 4 4v17a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h24zm-23.2 5.17l-.67.75a.5.5 0 0 0-.02.64l.06.06 3.29 2.92-3.3 2.92a.5.5 0 0 0-.03.7l.66.76c.18.2.5.22.7.04l4.97-4.42-4.96-4.41a.5.5 0 0 0-.7.04z"
+                ></path>
+                <path
+                  id="terminalIconCursor"
+                  d="M27.64 40h6.72c.22 0 .3.02.38.07.09.04.15.1.2.19.04.08.06.16.06.38v.72c0 .22-.02.3-.07.38a.45.45 0 0 1-.19.2c-.08.04-.16.06-.38.06h-6.72c-.22 0-.3-.02-.38-.07a.45.45 0 0 1-.2-.19c-.04-.08-.06-.16-.06-.38v-.72c0-.22.02-.3.07-.38.04-.09.1-.15.19-.2.08-.04.16-.06.38-.06z"
+                ></path>
+                <path
+                  id="terminalIconGear"
+                  d="M42.5 42l1.13 3.13.64.13 2.24-2.46.93.38-.16 3.33c.19.11.37.23.54.36l3.02-1.42.7.71-1.41 3.02c.13.17.25.35.36.54l3.33-.16.38.93-2.46 2.24c.05.21.1.42.13.64L55 54.5v1l-3.13 1.13c-.04.25-.1.5-.15.73l2.48 2.15-.38.93-3.28-.24c-.14.24-.3.47-.47.7l1.48 2.94-.71.7-2.94-1.47c-.23.17-.46.33-.7.47l.24 3.28-.93.38-2.15-2.48c-.27.06-.54.12-.82.16L42.5 68h-1l-1.04-3.12c-.28-.04-.55-.1-.82-.16l-2.15 2.48-.93-.38.24-3.28c-.24-.14-.47-.3-.7-.47l-2.94 1.48-.7-.71 1.47-2.94c-.17-.23-.33-.46-.47-.7l-3.28.24-.38-.93 2.48-2.15a9.95 9.95 0 0 1-.16-.82L29 55.5v-1l3.12-1.04c.04-.25.08-.49.14-.73l-2.46-2.24.38-.93 3.33.16c.11-.19.23-.37.36-.54l-1.42-3.02.71-.7 3.02 1.41c.17-.13.35-.25.54-.36l-.16-3.33.93-.38 2.24 2.46s.42-.1.64-.13L41.5 42h1zM42 53a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+                ></path>
+                <clipPath id="terminalIconClipPath">
+                  <use href="#terminalIconCode"></use>
+                </clipPath>
+              </defs>
+
+              <use href="#terminalIconCode" fill="#00d4ff"></use>
+              <use
+                href="#terminalIconCursor"
+                fill="#0a2540"
+                data-js-target="TerminalIcon.cursor"
+              ></use>
+              <use
+                href="#terminalIconGear"
+                fill="#7a73ff"
+                transform-origin="42 55"
+                data-js-target-list="TerminalIcon.gears"
+              ></use>
+              <g clip-path="url(#terminalIconClipPath)">
+                <use
+                  href="#terminalIconGear"
+                  fill="#80e9ff"
+                  transform-origin="42 55"
+                  data-js-target-list="TerminalIcon.gears"
+                ></use>
+              </g>
+            </svg>
+            <p class="text-white font-semibold text-[15px] mb-3">
+              <span class="border-l border-[#00d4ff] px-2"></span>
+              Tools for every stack
+            </p>
+            <div class="px-4">
+              <p class="text-[#adbdcc] text-base pr-10">
+                We offer client and server libraries in everything from React
+                and PHP to .NET and iOS.
+              </p>
+              <button
+                class="flex transition-all duration-500 hover:text-white group pt-[4px] pb-[7px] gap-[7px] rounded-full"
+              >
+                <span class="m-auto text-[#00d4ff] font-semibold"
+                  >See libraries</span
+                >
+                <div class="relative m-auto mt-1 hover:text-white">
+                  <div
+                    class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mt-[15px] mr-0 group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-white font-semibold"
+                  ></div>
+                  <span
+                    class="material-symbols-outlined w-[15px] h-[15px] font-semibold mt-1 ml-0 relative group-hover:translate-x-[1.55px] text-[#00d4ff] translate-x-[0px] transition-all ease-in-out duration-75"
+                  >
+                    chevron_right
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="">
+            <svg
+              class="AnimatedIcon__icon"
+              width="96"
+              height="96"
+              preserveAspectRatio="xMinYMin"
+              viewBox="0 0 96 96"
+              xmlns="http://www.w3.org/2000/svg"
+              data-js-controller="BlocksIcon"
+            >
+              <defs>
+                <path
+                  id="blocksIconBack"
+                  d="M30.68 31.37l9 4.15A4 4 0 0 1 42 39.15v10.89a4 4 0 0 1-2.32 3.63l-9 4.15a4 4 0 0 1-3.36 0l-9-4.15A4 4 0 0 1 16 50.04V39.15a4 4 0 0 1 .35-1.62L29 43.36v-1.54l-11.85-5.47a4 4 0 0 1 1.17-.83l9-4.15a4 4 0 0 1 3.36 0z"
+                ></path>
+                <path
+                  id="blocksIconFront"
+                  d="M55 45.15v10.89a4 4 0 0 1-2.32 3.63l-9 4.15a4 4 0 0 1-3.36 0l-9-4.15A4 4 0 0 1 29 56.04V45.15a4 4 0 0 1 .35-1.62L42 49.37l12.65-5.84a4 4 0 0 1 .35 1.62zm-11.32-7.78l9 4.15a4 4 0 0 1 1.17.83L42 47.82l-11.86-5.47a4 4 0 0 1 1.18-.83l9-4.15a4 4 0 0 1 3.36 0z"
+                ></path>
+                <clipPath id="blocksIconClipPath">
+                  <use
+                    data-js-target-list="BlocksIcon.firstBackBlocks"
+                    href="#blocksIconFront"
+                    transform="translate(-13, -6)"
+                    data-js-bbox="firstHiddenBlock"
+                  ></use>
+                  <use
+                    data-js-target-list="BlocksIcon.secondBackBlocks"
+                    href="#blocksIconFront"
+                    transform="translate(-65, -30)"
+                    data-js-bbox="secondHiddenBlock"
+                  ></use>
+                </clipPath>
+              </defs>
+
+              <use
+                data-js-target="BlocksIcon.firstHiddenBlock"
+                href="#blocksIconFront"
+                transform="translate(-13, -6)"
+                style="visibility: hidden"
+              ></use>
+              <use
+                data-js-target="BlocksIcon.secondHiddenBlock"
+                href="#blocksIconFront"
+                transform="translate(-65, -30)"
+                style="visibility: hidden"
+              ></use>
+
+              <use
+                data-js-target-list="BlocksIcon.secondBackBlocks"
+                href="#blocksIconFront"
+                fill="#00d4ff"
+                style="opacity: 0"
+              ></use>
+              <use
+                data-js-target-list="BlocksIcon.secondFrontBlocks"
+                href="#blocksIconFront"
+                fill="#7a73ff"
+                style="opacity: 0"
+              ></use>
+              <use
+                data-js-target-list="BlocksIcon.firstBackBlocks"
+                href="#blocksIconFront"
+                fill="#00d4ff"
+                transform="translate(-13, -6)"
+              ></use>
+              <use
+                data-js-target-list="BlocksIcon.firstFrontBlocks"
+                href="#blocksIconFront"
+                fill="#7a73ff"
+              ></use>
+              <g clip-path="url(#blocksIconClipPath)">
+                <use
+                  data-js-target-list="BlocksIcon.firstFrontBlocks"
+                  href="#blocksIconFront"
+                  fill="#cff"
+                ></use>
+                <use
+                  data-js-target-list="BlocksIcon.secondFrontBlocks"
+                  href="#blocksIconFront"
+                  fill="#cff"
+                  style="opacity: 0"
+                ></use>
+              </g>
+            </svg>
+            <p class="text-white font-semibold text-[15px] mb-3">
+              <span class="border-l border-[#00d4ff] px-2"></span>
+              Prebuilt integrations
+            </p>
+            <div class="px-4">
+              <p class="text-[#adbdcc] text-base pr-10">
+                Use integrations for systems like Shopify, WooCommerce,
+                NetSuite, and more.
+              </p>
+              <button
+                class="flex transition-all duration-500 group pt-[4px] pb-[7px] gap-[7px] rounded-full"
+              >
+                <span
+                  class="m-auto text-[#00d4ff] hover:text-white font-semibold"
+                  >Explore partners</span
+                >
+                <div class="relative m-auto mt-1 hover:text-white">
+                  <div
+                    class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mt-[15px] mr-0 group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-white font-semibold"
+                  ></div>
+                  <span
+                    class="material-symbols-outlined w-[15px] h-[15px] font-semibold mt-1 ml-0 relative group-hover:translate-x-[1.55px] text-[#00d4ff] translate-x-[0px] transition-all ease-in-out duration-75"
+                  >
+                    chevron_right
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- line -->
+    <section
+      class="-skew-y-6 -translate-y-[186%] w-full flex flex-col justify-end"
+    >
+      <div class="container mx-auto"></div>
+      <div class="bg-[#80e9ff] mix-blend-multiply h-10 w-1/5 self-end"></div>
+      <div
+        class="bg-[#7a73ff] mix-blend-multiply h-10 -mt-3 w-36 self-end"
+      ></div>
+    </section>
+    <!-- line mx-auto container -->
+    <section class="-skew-y-6 pb-36 pt-8 px-20 z-30 bg-white relative">
+      <div class="mx-auto skew-y-6 container">
+        <div class="px-20">
+          <p class="text-[#635bff] text-lg font-bold mb-6">Why Stripe</p>
+          <h1 class="text-[#0a2540] font-bold text-4xl mb-16">
+            A technology-first approach to payments <br />
+            and finance
+          </h1>
+          <section class="grid grid-cols-4 gap-5">
+            <div class="">
+              <img src="./assets/glo.PNG" class="h-12 mb-3" alt="material" />
+              <p class="font-semibold text-[16px] mb-3 text-[#0a2540]">
+                <span class="border-l border-[#635bff] px-2"></span>
+                Close to the metal
+              </p>
+              <div class="">
+                <p class="text-[#425466] text-base pl-4">
+                  From
+                  <span class="text-[#635bff] font-semibold"
+                    >direct integrations</span
+                  >
+                  with card networks and banks to checkout flows in the browser,
+                  we operate on and optimize at every level of the financial
+                  stack.
+                </p>
+              </div>
+            </div>
+            <div class="">
+              <img src="./assets/doublePause.svg" class="h-16" alt="material" />
+              <p class="font-semibold text-[15px] mb-3 text-[#0a2540]">
+                <span class="border-l border-[#635bff] px-2"></span>
+                Fastest-improving platform
+              </p>
+              <div class="">
+                <p class="text-[#425466] text-base pl-4">
+                  We release
+                  <span class="text-[#635bff] font-semibold">
+                    hundreds of features</span
+                  >
+                  and improvements each year to help you stay ahead of industry
+                  shifts.(On average, we deploy our production API 16x per day.)
+                </p>
+              </div>
+            </div>
+            <div class="">
+              <img src="./assets/test.svg" class="h-16" alt="material" />
+              <p class="font-semibold text-[15px] mb-3 text-[#0a2540]">
+                <span class="border-l border-[#635bff] px-2"></span>
+                Battle-tested reliability
+              </p>
+              <div class="">
+                <p class="text-[#425466] text-base pl-4">
+                  Our systems operate with
+                  <span class="text-[#635bff] font-semibold">99.99%+</span>
+                  uptime and are highly scalable and redundant. Stripe is
+                  certified to the highest compliance standards.
+                </p>
+              </div>
+            </div>
+            <div class="">
+              <img src="./assets/machine.svg" class="h-16" alt="material" />
+              <p class="font-semibold text-[15px] mb-3 text-[#0a2540]">
+                <span class="border-l border-[#635bff] px-2"></span>
+                Intelligent optimizations
+              </p>
+              <div class="">
+                <p class="text-[#425466] text-base pl-4">
+                  Our machine learning models train on
+                  <span class="text-[#635bff] font-semibold">billions</span> of
+                  data points and help increase revenue across conversion,
+                  fraud, revenue recovery, and more.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- line bottom -->
+    <section
+      class="-skew-y-6 bg-white -translate-y-[50%] flex relative z-40 flex-col justify-end w-full"
+    >
+      <div class="bg-[#80e9ff] mix-blend-multiply h-10 w-36 self-start"></div>
+      <div
+        class="bg-[#7a73ff] mix-blend-multiply h-10 -mt-3 w-1/5 self-start"
+      ></div>
+    </section>
+    <!-- end line -->
+    <!-- globe -->
+    <section
+      class="bg-[#0a2540] relative -z-10 overflow-hidden -translate-y-[38%]"
+    >
+      <div class="grid container mx-auto grid-cols-2 px-20 mt-36">
+        <div class="z-10">
+          <p class="mt-96 text-[#00d4ff] text-lg font-semibold leading-10">
+            Global scale
+          </p>
+          <h2 class="text-white font-bold text-4xl mt-6 mb-6">
+            The backbone for <br />
+            internet business
+          </h2>
+          <p class="text-[#adbdcc] text-lg pr-20 mb-6">
+            For ambitious companies around the world, Stripe makes moving money
+            as simple, borderless, and programmable as the rest of the internet.
+            Our teams are based in dozens of offices around the world and we
+            process hundreds of billions of dollars each year for
+            <span class="text-[#00d4ff] hover:text-white font-semibold"
+              >startups to Fortune 500s</span
+            >.
+          </p>
+        </div>
+      </div>
+      <section class="container mx-auto relative">
+        <div class="absolute -right-96 -z-1 top-0 -mt-[70%]">
+          <img src="./assets/globa.png" alt="" class="truncate" />
+        </div>
+        <section class="grid grid-cols-4 gap-5 z-10 px-20 mb-24">
+          <div class="z-10">
+            <p class="font-bold text-2xl mb-3 text-white">
+              <span class="border-l border-[#635bff] px-2"></span>
+              250M+
+            </p>
+            <div class="">
+              <p class="text-[#adbdcc] text-base pl-4">
+                API requests per day, peaking at 13,000 requests a second.
+              </p>
+            </div>
+          </div>
+          <div class="z-10">
+            <p class="font-bold text-2xl mb-3 text-white">
+              <span class="border-l border-[#635bff] px-2"></span>
+              90%
+            </p>
+            <div class="">
+              <p class="text-[#adbdcc] text-base pl-4">
+                of U.S. adults have bought from businesses using Stripe.
+              </p>
+            </div>
+          </div>
+          <div class="z-10">
+            <p class="text-2xl mb-3 font-bold text-white">
+              <span class="border-l border-[#635bff] px-2"></span>
+              135+
+            </p>
+            <div class="">
+              <p class="text-[#adbdcc] text-base pl-4">
+                currencies and payment methods supported.
+              </p>
+            </div>
+          </div>
+          <div class="z-10">
+            <p class="font-bold text-2xl mb-3 text-white">
+              <span class="border-l border-[#635bff] px-2"></span>
+              35+
+            </p>
+            <div class="">
+              <p class="text-[#adbdcc] text-base pl-4">
+                countries with local acquiring, optimizing acceptance rates.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <!-- end glob -->
+    <section
+      class="grid container mx-auto grid-cols-4 -mt-60 px-20 gap-8 pb-28 z-50"
+    >
+      <div class="col-span-2 px-6">
+        <h1 class="text-[#0a2540] font-bold text-2xl mb-5">
+          Ready to get started?
+        </h1>
+        <p class="text-[#425466] text-lg pr-12">
+          Explore
+          <span class="hover:text-[#0a2540] font-semibold text-[#635bff]"
+            >Stripe Payments</span
+          >, or create an account instantly and start accepting payments. You
+          can also contact us to design a custom package for your business.
+        </p>
+        <div class="flex items-center justify-start mt-5 space-x-3">
+          <button
+            class="flex bg-[#635bff] transition-all duration-500 group pl-[16px] pr-[12px] pt-[4px] pb-[7px] gap-[7px] rounded-full hover:bg-[#0a2540]"
+          >
+            <span class="m-auto text-white font-semibold">Start now</span>
+            <div class="relative m-auto mt-1">
+              <div
+                class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mr-[0px] mt-[10.31px] group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-white"
+              ></div>
+              <img
+                class="relative group-hover:translate-x-[1.55px] translate-x-[0px] transition-all ease-in-out duration-75"
+                src="https://cdn.discordapp.com/attachments/1021388253137473536/1027629448041861251/3-removebg-preview_1.png"
+                width="12px"
+                height="12px"
+              />
+            </div>
+          </button>
+          <button
+            class="flex transition-all hover:bg-opacity-[0.6] duration-500 group hover: bg-opacity-[0.3] pl-[16px] pr-[12px] pt-[4px] pb-[7px] gap-[7px] rounded-[16.5px] hover:text-[#0a2540]"
+          >
+            <span
+              class="m-auto text-[#635bff] font-semibold hover:text-[#425466]"
+              >Contact sales</span
+            >
+            <div class="relative m-auto mt-1">
+              <div
+                class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mr-0 mt-[14.2px] group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-[#0a2540]"
+              ></div>
+              <span
+                class="material-symbols-outlined w-[15px] h-[12px] w-[12px] font-extrabold mt-1 -ml-1 relative group-hover:translate-x-[1.55px] text-[#635bff] translate-x-[0px] transition-all ease-in-out duration-75"
+              >
+                chevron_right
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="">
+        <img src="./assets/pricing.svg" class="h-16" alt="material" />
+        <p class="font-semibold text-[15px] mb-3 text-[#0a2540]">
+          <span class="border-l border-[#635bff] px-2"></span>
+          Always know what you pay
+        </p>
+        <div class="">
+          <p class="text-[#425466] text-base pl-4 pr-3">
+            Integrated per-transaction pricing with no hidden fees.
+          </p>
+        </div>
+        <button
+          class="flex transition-all hover:bg-opacity-[0.6] duration-500 group hover: bg-opacity-[0.3] pl-[16px] pr-[12px] pt-[4px] pb-[7px] gap-[7px] rounded-[16.5px] hover:text-[#0a2540]"
+        >
+          <span class="m-auto text-[#635bff] font-semibold hover:text-[#425466]"
+            >Precing details</span
+          >
+          <div class="relative m-auto mt-1">
+            <div
+              class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mr-0 mt-[14.3px] group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-[#0a2540]"
+            ></div>
+            <span
+              class="material-symbols-outlined w-[15px] h-[12px] w-[12px] font-extrabold mt-1 -ml-1 relative group-hover:translate-x-[1.55px] text-[#635bff] translate-x-[0px] transition-all ease-in-out duration-75"
+            >
+              chevron_right
+            </span>
+          </div>
+        </button>
+      </div>
+      <div class="">
+        <img src="./assets/code-mark.svg" class="h-16" alt="material" />
+        <p class="font-semibold text-[15px] mb-3 text-[#0a2540]">
+          <span class="border-l border-[#635bff] px-2"></span>
+          Start your integration
+        </p>
+        <div class="">
+          <p class="text-[#425466] text-base pl-4 pr-3">
+            Get up and running with Stripe in as little as 10 minutes.
+          </p>
+        </div>
+        <button
+          class="flex transition-all hover:bg-opacity-[0.6] duration-500 group hover: bg-opacity-[0.3] pl-[16px] pr-[12px] pt-[4px] pb-[7px] gap-[7px] rounded-[16.5px] hover:text-[#0a2540]"
+        >
+          <span class="m-auto text-[#635bff] font-semibold hover:text-[#425466]"
+            >API refrence</span
+          >
+          <div class="relative m-auto mt-1">
+            <div
+              class="absolute w-[10px] transition-all ease-in-out duration-75 h-[2.1px] mr-0 mt-[14.3px] group-hover:translate-x-[0px] translate-x-[1px] z-[1000] group-hover:bg-[#0a2540]"
+            ></div>
+            <span
+              class="material-symbols-outlined w-[15px] h-[12px] w-[12px] font-extrabold mt-1 -ml-1 relative group-hover:translate-x-[1.55px] text-[#635bff] translate-x-[0px] transition-all ease-in-out duration-75"
+            >
+              chevron_right
+            </span>
+          </div>
+        </button>
+      </div>
+    </section>
+    <section class="-skew-y-6 relative bg-white z-40 pt-32">
+      <section class="w-full flex flex-col self-end absolute">
+        <div class="bg-[#80e9ff] mix-blend-multiply h-10 w-36 self-end"></div>
+        <div class="bg-[#7a73ff] mix-blend-multiply h-10 w-1/5 self-end"></div>
+      </section>
+      <section class="flex relative flex-col justify-end">
+        <div class="bg-[#80e9ff] mix-blend-multiply h-10 w-36 self-start"></div>
+        <div
+          class="bg-[#7a73ff] mix-blend-multiply h-10 -mt-3 w-1/5 self-start"
+        ></div>
+      </section>
+    </section>
+    <section class="bg-[#f6f9fc] -z-50 -mt-28 py-16">
+      <div
+        class="mt-48 px-20 text-[#425466] text-[15px] flex justify-around container mx-auto"
+      >
+        <div class="flex flex-col justify-between">
+          <section>
+            <div class="">
+              <svg
+                viewBox="0 0 60 25"
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="25"
+                class="UserLogo variant--"
+              >
+                <title>Stripe logo</title>
+                <path
+                  fill="var(--userLogoColor, #0A2540)"
+                  d="M59.64 14.28h-8.06c.19 1.93 1.6 2.55 3.2 2.55 1.64 0 2.96-.37 4.05-.95v3.32a8.33 8.33 0 0 1-4.56 1.1c-4.01 0-6.83-2.5-6.83-7.48 0-4.19 2.39-7.52 6.3-7.52 3.92 0 5.96 3.28 5.96 7.5 0 .4-.04 1.26-.06 1.48zm-5.92-5.62c-1.03 0-2.17.73-2.17 2.58h4.25c0-1.85-1.07-2.58-2.08-2.58zM40.95 20.3c-1.44 0-2.32-.6-2.9-1.04l-.02 4.63-4.12.87V5.57h3.76l.08 1.02a4.7 4.7 0 0 1 3.23-1.29c2.9 0 5.62 2.6 5.62 7.4 0 5.23-2.7 7.6-5.65 7.6zM40 8.95c-.95 0-1.54.34-1.97.81l.02 6.12c.4.44.98.78 1.95.78 1.52 0 2.54-1.65 2.54-3.87 0-2.15-1.04-3.84-2.54-3.84zM28.24 5.57h4.13v14.44h-4.13V5.57zm0-4.7L32.37 0v3.36l-4.13.88V.88zm-4.32 9.35v9.79H19.8V5.57h3.7l.12 1.22c1-1.77 3.07-1.41 3.62-1.22v3.79c-.52-.17-2.29-.43-3.32.86zm-8.55 4.72c0 2.43 2.6 1.68 3.12 1.46v3.36c-.55.3-1.54.54-2.89.54a4.15 4.15 0 0 1-4.27-4.24l.01-13.17 4.02-.86v3.54h3.14V9.1h-3.13v5.85zm-4.91.7c0 2.97-2.31 4.66-5.73 4.66a11.2 11.2 0 0 1-4.46-.93v-3.93c1.38.75 3.1 1.31 4.46 1.31.92 0 1.53-.24 1.53-1C6.26 13.77 0 14.51 0 9.95 0 7.04 2.28 5.3 5.62 5.3c1.36 0 2.72.2 4.09.75v3.88a9.23 9.23 0 0 0-4.1-1.06c-.86 0-1.44.25-1.44.9 0 1.85 6.29.97 6.29 5.88z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex space-x-2 pt-2">
+              <svg
+                class="LocaleControl__triggerIcon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.54 8.04h4.42v4.43c0 .57.76.75 1.01.24l4.96-9.93a.54.54 0 0 0-.72-.72L3.3 7.03c-.5.25-.33 1.01.24 1.01"
+                  fill="#0A2540"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span>United States</span>
+            </div>
+            <div class="flex space-x-2 pt-1">
+              <svg
+                class="LocaleControl__triggerIcon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M7.5 2C10.91 2 13 4.01 13 6.5c0 2.07-1.45 3.82-3.92 4.34L6.62 13.3a.66.66 0 0 1-1.12-.46v-2.1C3.29 10.12 2 8.45 2 6.5 2 4.01 4.09 2 7.5 2z"
+                  fill="#0A2540"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span>English (United States)</span>
+            </div>
+          </section>
+          <section>
+            <ul>
+              <li>© 2022 Stripe, Inc.</li>
+            </ul>
+          </section>
+        </div>
+        <div class="">
+          <section class="">
+            <h1 class="text-[#0a2540] text-[15px] font-semibold pb-3">
+              Products
+            </h1>
+            <ul>
+              <li><a>Atlas</a></li>
+              <li><a>Billing</a></li>
+              <li><a>Capital</a></li>
+              <li><a>Checkout</a></li>
+              <li><a>Climate</a></li>
+              <li><a>Connect</a></li>
+              <li><a>Corporate Card</a></li>
+              <li><a>Data Pipeline</a></li>
+              <li><a>Elements</a></li>
+              <li><a>Financial Connections</a></li>
+              <li><a>Identity</a></li>
+              <li><a>Invoicing</a></li>
+              <li><a>Issuing</a></li>
+              <li><a>Link</a></li>
+              <li><a>Payments</a></li>
+              <li><a>Payment Links</a></li>
+              <li><a>Payouts</a></li>
+              <li><a>Pricing</a></li>
+              <li><a>Radar</a></li>
+              <li><a>Revenue Recognition</a></li>
+              <li><a>Sigma</a></li>
+              <li><a>Tax</a></li>
+              <li><a>Terminal</a></li>
+              <li><a>Treasury</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="">
+          <section class="">
+            <h1 class="text-[#0a2540] text-[15px] font-semibold pb-3">
+              Use Cases
+            </h1>
+            <ul>
+              <li><a>Ecommerce</a></li>
+              <li><a>SaaS</a></li>
+              <li><a>Marketplaces</a></li>
+              <li><a>Embedded Finance</a></li>
+              <li><a>Platforms</a></li>
+              <li><a>Creator Economy</a></li>
+              <li><a>Crypto</a></li>
+              <li><a>Global Businesses</a></li>
+              <h1 class="text-[#0a2540] text-[15px] font-semibold pt-3 pb-1">
+                Integrations & Custom Solutions
+              </h1>
+              <li><a>App Marketplace</a></li>
+              <li><a>Partner Ecosystem</a></li>
+              <li><a>Professional Services</a></li>
+              <h1 class="text-[#0a2540] text-[15px] font-semibold pt-3 pb-1">
+                Developers
+              </h1>
+              <li><a>Documentation</a></li>
+              <li><a>API Reference</a></li>
+              <li><a>API Status</a></li>
+              <li><a>API Changelog</a></li>
+              <li><a>Build a Stripe App</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="">
+          <section class="">
+            <h1 class="text-[#0a2540] text-[15px] font-semibold pb-3">
+              Resources
+            </h1>
+            <ul>
+              <li><a>Support Center</a></li>
+              <li><a>Support Plans</a></li>
+              <li><a>Guides</a></li>
+              <li><a>Customer Stories</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Annual Conference</a></li>
+              <li><a>Privacy & Terms</a></li>
+              <li><a>Licenses</a></li>
+              <li><a>COVID-19</a></li>
+              <li><a>Sitemap</a></li>
+              <li><a>Cookie settings</a></li>
+              <h1 class="text-[#0a2540] text-[15px] font-semibold pt-3 pb-1">
+                Company
+              </h1>
+              <li><a>Jobs</a></li>
+              <li><a>Newsroom</a></li>
+              <li><a>Stripe Press</a></li>
+              <li><a>Become a Partner</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+    <script>
+      var gradient = new Gradient();
+      gradient.initGradient('#gradient-canvas');
+    </script>
+  </body>
+</html>
